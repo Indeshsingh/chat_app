@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Appcolors {
+class AppColors {
   static const Color scaffoldlight = Color(0XFFFFFFFF);
   static const Color scaffolddark = Color(0XFF0F1828);
   static const Color textlightmode = Color(0XFF0F1828);

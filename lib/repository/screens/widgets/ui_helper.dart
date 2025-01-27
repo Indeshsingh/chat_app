@@ -2,11 +2,11 @@ import 'package:chat_app/domain/constants/appcolors.dart';
 import 'package:flutter/material.dart';
 
 class UiHelper {
-  static CustomImage({required String imgurl}) {
+  static customImage({required String imgurl}) {
     return Image.asset("assets/fonts/images/$imgurl");
   }
 
-  static CustomText({
+  static customText({
     required String text,
     required double fontsize,
     String? fontfamily,
@@ -27,7 +27,7 @@ class UiHelper {
     );
   }
 
-  static CustomButton(
+  static customButton(
       {required String buttonname,
       required VoidCallback callback,
       Color? buttonColor}) {

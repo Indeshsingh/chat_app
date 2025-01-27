@@ -22,23 +22,23 @@ class OnboardingScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            UiHelper.CustomImage(imgurl: "10173148_8440.jpg"),
+            UiHelper.customImage(imgurl: "10173148_8440.jpg"),
             SizedBox(
               height: 28,
             ),
-            UiHelper.CustomText(
+            UiHelper.customText(
                 text: "Connect easily with",
                 fontsize: 24,
                 fontfamily: "bold",
                 fontweight: FontWeight.bold,
                 context: context),
-            UiHelper.CustomText(
+            UiHelper.customText(
                 text: "your family and friends",
                 fontsize: 24,
                 fontfamily: "bold",
                 fontweight: FontWeight.bold,
                 context: context),
-            UiHelper.CustomText(
+            UiHelper.customText(
                 text: "over countries",
                 fontsize: 24,
                 fontfamily: "bold",
@@ -48,7 +48,7 @@ class OnboardingScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton:
-          UiHelper.CustomButton(buttonname: "Start Messaging", callback: () {}),
+          UiHelper.customButton(buttonname: "Start Messaging", callback: () {}),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

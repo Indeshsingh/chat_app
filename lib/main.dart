@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<ThemesCubit, ThemesState>(
       builder: (context, state) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Chat App',
           theme: state is LightThemesState
               ? Appthemes.lightTheme

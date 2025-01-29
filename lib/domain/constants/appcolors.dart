@@ -13,4 +13,6 @@ class AppColors {
   static const Color containerdarktmode = Color(0XFF152033);
   static const Color hintlightmode = Color(0XFFADB5BD);
   static const Color hintdarkmode = Color(0XFFF7F7FC);
+  static const Color otptextlightmode = Color(0XFF0020E3);
+  static const Color otptextdarkmode = Color(0XFFF7F7FC);
 }

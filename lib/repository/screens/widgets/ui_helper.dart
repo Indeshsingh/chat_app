@@ -32,8 +32,8 @@ class UiHelper {
       required VoidCallback callback,
       Color? buttonColor}) {
     return SizedBox(
-      height: 52,
-      width: 327,
+      height: 45,
+      width: 350,
       child: ElevatedButton(
           onPressed: () {
             callback();
@@ -45,7 +45,10 @@ class UiHelper {
           child: Text(
             buttonname,
             style: TextStyle(
-                fontSize: 16, color: Colors.white, fontWeight: FontWeight.w300),
+                fontSize: 16,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: "bold"),
           )),
     );
   }

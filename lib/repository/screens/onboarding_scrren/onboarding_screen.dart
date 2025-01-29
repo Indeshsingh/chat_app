@@ -1,3 +1,4 @@
+import 'package:chat_app/domain/constants/appcolors.dart';
 import 'package:chat_app/domain/constants/cubit/themes_cubit.dart';
 import 'package:chat_app/repository/screens/onboarding_scrren/login_screen.dart';
 import 'package:chat_app/repository/screens/widgets/ui_helper.dart';
@@ -11,6 +12,9 @@ class OnboardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? AppColors.scaffolddark
+            : AppColors.scaffoldlight,
         actions: [
           IconButton(
               onPressed: () {

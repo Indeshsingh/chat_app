@@ -72,6 +72,10 @@ class UiHelper {
           controller: controller,
           keyboardType: textinputtype,
           decoration: InputDecoration(
+              // filled: true,
+              // fillColor: Theme.of(context).brightness == Brightness.dark
+              //     ? AppColors.textdarkmode
+              //     : AppColors.textlightmode,
               hintStyle: TextStyle(
                 color: Theme.of(context).brightness == Brightness.dark
                     ? AppColors.hintdarkmode

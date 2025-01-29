@@ -1,3 +1,4 @@
+import 'package:chat_app/repository/screens/bottomnav/bottomnavigation_screen.dart';
 import 'package:chat_app/repository/screens/widgets/ui_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -60,8 +61,12 @@ class ProfileScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton:
-          UiHelper.customButton(buttonname: "Save", callback: () {}),
+      floatingActionButton: UiHelper.customButton(
+          buttonname: "Save",
+          callback: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => BottomnavigationScreen()));
+          }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

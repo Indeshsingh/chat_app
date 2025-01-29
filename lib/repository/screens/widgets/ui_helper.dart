@@ -35,7 +35,9 @@ class UiHelper {
       height: 52,
       width: 327,
       child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            callback();
+          },
           style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.buttonlightmode,
               shape: RoundedRectangleBorder(
@@ -45,6 +47,38 @@ class UiHelper {
             style: TextStyle(
                 fontSize: 16, color: Colors.white, fontWeight: FontWeight.w300),
           )),
+    );
+  }
+
+  static customTextfield(
+      {required TextEditingController controller,
+      required String text,
+      required TextInputType textinputtype,
+      required BuildContext context}) {
+    return Container(
+      height: 45,
+      width: 350,
+      decoration: BoxDecoration(
+          color: Theme.of(context).brightness == Brightness.dark
+              ? AppColors.containerdarktmode
+              : AppColors.containerLightmode,
+          borderRadius: BorderRadius.circular(6)),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 10),
+        child: TextField(
+          controller: controller,
+          keyboardType: textinputtype,
+          decoration: InputDecoration(
+              hintStyle: TextStyle(
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? AppColors.hintdarkmode
+                    : AppColors.hintlightmode,
+                fontSize: 14,
+              ),
+              hintText: text,
+              border: InputBorder.none),
+        ),
+      ),
     );
   }
 }

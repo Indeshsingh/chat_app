@@ -1,4 +1,5 @@
 import 'package:chat_app/domain/constants/cubit/themes_cubit.dart';
+import 'package:chat_app/repository/screens/onboarding_scrren/login_screen.dart';
 import 'package:chat_app/repository/screens/widgets/ui_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -47,8 +48,12 @@ class OnboardingScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton:
-          UiHelper.customButton(buttonname: "Start Messaging", callback: () {}),
+      floatingActionButton: UiHelper.customButton(
+          buttonname: "Start Messaging",
+          callback: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (_) => LoginScreen()));
+          }),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }

@@ -19,4 +19,5 @@ class AppColors {
   static const Color icondarkmode = Color(0XFFF7F7FC);
   static const Color bottomlightmode = Color(0XFFFFFFFF);
   static const Color bottomdarktmode = Color(0XFF0F1828);
+  static const Color iconlight = Color(0XFFABD5BD);
 }

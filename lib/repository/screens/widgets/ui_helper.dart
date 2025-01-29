@@ -57,6 +57,7 @@ class UiHelper {
       {required TextEditingController controller,
       required String text,
       required TextInputType textinputtype,
+      required IconData icondata,
       required BuildContext context}) {
     return Container(
       height: 45,
@@ -66,25 +67,27 @@ class UiHelper {
               ? AppColors.containerdarktmode
               : AppColors.containerLightmode,
           borderRadius: BorderRadius.circular(6)),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 10),
-        child: TextField(
-          controller: controller,
-          keyboardType: textinputtype,
-          decoration: InputDecoration(
-              // filled: true,
-              // fillColor: Theme.of(context).brightness == Brightness.dark
-              //     ? AppColors.textdarkmode
-              //     : AppColors.textlightmode,
-              hintStyle: TextStyle(
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? AppColors.hintdarkmode
-                    : AppColors.hintlightmode,
-                fontSize: 14,
-              ),
-              hintText: text,
-              border: InputBorder.none),
-        ),
+      child: TextField(
+        controller: controller,
+        keyboardType: textinputtype,
+        decoration: InputDecoration(
+            prefixIcon: Icon(
+              icondata,
+              color: AppColors.iconlight,
+            ),
+
+            // filled: true,
+            // fillColor: Theme.of(context).brightness == Brightness.dark
+            //     ? AppColors.textdarkmode
+            //     : AppColors.textlightmode,
+            hintStyle: TextStyle(
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? AppColors.hintdarkmode
+                  : AppColors.hintlightmode,
+              fontSize: 14,
+            ),
+            hintText: text,
+            border: InputBorder.none),
       ),
     );
   }

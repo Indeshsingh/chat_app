@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../../domain/constants/appcolors.dart';
 
+// ignore: must_be_immutable
 class LoginScreen extends StatelessWidget {
   TextEditingController phoneController = TextEditingController();
 

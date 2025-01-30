@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../../domain/constants/appcolors.dart';
 
+// ignore: must_be_immutable
 class ProfileScreen extends StatelessWidget {
   TextEditingController firstnameController = TextEditingController();
   TextEditingController lastnameController = TextEditingController();

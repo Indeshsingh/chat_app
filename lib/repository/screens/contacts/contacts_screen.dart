@@ -45,7 +45,7 @@ class ContactsScreen extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(
-              height: 30,
+              height: 18,
             ),
             UiHelper.customTextfield(
                 controller: searchController,
@@ -67,7 +67,7 @@ class ContactsScreen extends StatelessWidget {
                             height: 55,
                             width: 55,
                             child: ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
+                              borderRadius: BorderRadius.circular(18),
                               child: UiHelper.customImage(
                                   imgurl: arrContacts[index]["img"].toString(),
                                   fit: BoxFit.cover),

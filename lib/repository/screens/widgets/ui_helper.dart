@@ -2,7 +2,11 @@ import 'package:chat_app/domain/constants/appcolors.dart';
 import 'package:flutter/material.dart';
 
 class UiHelper {
-  static customImage({required String imgurl}) {
+  static customImage(
+      {required String imgurl,
+      BoxFit fit = BoxFit.cover,
+      double? width,
+      double? height}) {
     return Image.asset("assets/fonts/images/$imgurl");
   }
 

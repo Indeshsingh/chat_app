@@ -37,8 +37,16 @@ class ContactsScreen extends StatelessWidget {
         backgroundColor: Theme.of(context).brightness == Brightness.dark
             ? AppColors.scaffolddark
             : AppColors.scaffoldlight,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(CupertinoIcons.back)),
         title: UiHelper.customText(
-            text: "Contacts", fontsize: 18, context: context),
+            text: "Contacts",
+            fontsize: 18,
+            context: context,
+            fontweight: FontWeight.bold),
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
       ),
       body: Center(

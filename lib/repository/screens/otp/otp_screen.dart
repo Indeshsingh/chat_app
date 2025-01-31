@@ -1,6 +1,7 @@
 import 'package:chat_app/domain/constants/appcolors.dart';
 import 'package:chat_app/repository/screens/profile/profile_screen.dart';
 import 'package:chat_app/repository/screens/widgets/ui_helper.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
 
@@ -36,6 +37,16 @@ class OtpScreen extends StatelessWidget {
       ),
     );
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? AppColors.scaffolddark
+            : AppColors.scaffoldlight,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(CupertinoIcons.back)),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

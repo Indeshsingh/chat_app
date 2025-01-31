@@ -23,6 +23,11 @@ class MoreScreen extends StatelessWidget {
           backgroundColor: Theme.of(context).brightness == Brightness.dark
               ? AppColors.scaffolddark
               : AppColors.scaffoldlight,
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(CupertinoIcons.back)),
           title: UiHelper.customText(
               text: "More",
               fontsize: 18,

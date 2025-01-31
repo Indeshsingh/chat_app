@@ -1,4 +1,5 @@
 import 'package:chat_app/repository/screens/widgets/ui_helper.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../domain/constants/appcolors.dart';
@@ -54,6 +55,11 @@ class ChatScreen extends StatelessWidget {
           backgroundColor: Theme.of(context).brightness == Brightness.dark
               ? AppColors.scaffolddark
               : AppColors.scaffoldlight,
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(CupertinoIcons.back)),
           title: UiHelper.customText(
               text: "Chats",
               fontsize: 18,

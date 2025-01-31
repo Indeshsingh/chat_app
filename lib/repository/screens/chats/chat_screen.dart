@@ -1,9 +1,9 @@
 import 'package:chat_app/repository/screens/widgets/ui_helper.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../domain/constants/appcolors.dart';
 
+// ignore: must_be_immutable
 class ChatScreen extends StatelessWidget {
   TextEditingController searchController = TextEditingController();
   var arrContacts = [

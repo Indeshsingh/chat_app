@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../domain/constants/appcolors.dart';
 
+// ignore: must_be_immutable
 class MoreScreen extends StatelessWidget {
   var arrMore = [
     {"icon": Icons.person, "text": "Account"},

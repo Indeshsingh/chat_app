@@ -17,6 +17,10 @@ import os
 # TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
 # TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 # TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
+TWILIO_ACCOUNT_SID = "your_twilio_account_sid"
+TWILIO_AUTH_TOKEN = "your_twilio_auth_token"
+TWILIO_PHONE_NUMBER = "your_twilio_phone_number"
+
 
 from pathlib import Path
 

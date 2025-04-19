@@ -1,5 +1,6 @@
 import 'package:chat_app/domain/constants/appthemes.dart';
 import 'package:chat_app/domain/constants/cubit/themes_cubit.dart';
+import 'package:chat_app/repository/screens/onboarding_scrren/cubit/auth_cubit.dart';
 import 'package:chat_app/repository/screens/onboarding_scrren/onboarding_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -22,13 +23,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemesCubit, ThemesState>(
       builder: (context, state) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Chat App',
-          theme: state is LightThemesState
-              ? Appthemes.lightTheme
-              : Appthemes.darkTheme,
-          home: OnboardingScreen(),
+        return BlocProvider(
+          create: (context) => AuthCubit(),
+          child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Chat App',
+            theme: state is LightThemesState
+                ? Appthemes.lightTheme
+                : Appthemes.darkTheme,
+            home: OnboardingScreen(),
+          ),
         );
       },
     );
